@@ -14,21 +14,28 @@ public:
     void getData(void){
         cout << "The id of this employee is "<<id <<"and this is employee number "<<count<<endl;
     }
+
+    static void getCout(void){
+        cout << "The value of count is " << count << endl;
+    }
 };
 
 
-int Employee:: count=1000; //defaut value is zero
+int Employee:: count; //defaut value is zero
 
 int main(){
     Employee harry, rohan, lovish;
     harry.setData();
     harry.getData();
+    Employee::getCout();
 
     rohan.setData();
     rohan.getData();
+    Employee::getCout();
 
     lovish.setData();
     lovish.getData();
+    Employee::getCout();
 
     return 0;
 }
