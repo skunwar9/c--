@@ -8,6 +8,7 @@ class Complex{
         a = n1;
         b = n2;
     }
+    
     friend Complex sumComplex(Complex o1, Complex o2);
     void printNum(){
         cout << "your num is " << a << "+" << b << "i"<<endl;
@@ -34,3 +35,13 @@ int main(){
     sum.printNum();
     return 0;
 }
+
+//properties of friend functions
+/*
+1. Not in the scope of class
+2. since it is not in the scope of the class, it cannot br called from the obj of that class. c1.sumComplex()==invalid
+3. can be invoked without the help of any object
+4. usually contains object as arg
+5. can be declared inside public or pvt section of the class
+
+*/
